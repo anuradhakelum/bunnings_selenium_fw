@@ -10,9 +10,9 @@ import pages.CartPage;
 import pages.HomePage;
 
 public class AddItemToCartStepDefinition {
-    protected HomePage homePage;
-    protected CartPage cartPage;
-    protected WebDriver driver;
+    private HomePage homePage;
+    private CartPage cartPage;
+    private WebDriver driver;
 
     @Given("User is in Home page")
     public void user_is_in_home_page() {

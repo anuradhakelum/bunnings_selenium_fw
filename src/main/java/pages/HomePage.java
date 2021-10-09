@@ -30,38 +30,46 @@ public class HomePage {
         driver.findElement(searchBox).sendKeys(item, Keys.ENTER);
     }
 
+    // click on Store & Availability
     public void clickAvailability() {
         setWait(storeAvailability);
         driver.findElement(storeAvailability).click();
     }
 
+    //Select and filter for Click and collect
     public void clickClickAndCollect() {
         driver.findElement(clickAndCollect).click();
     }
 
+    //add items to card by item index, index start with 0
     public void addItemToCart(int index) {
         getData(index);
         driver.findElement(addToCartButton).click();
     }
 
+    //go to cart page
     public CartPage goToCart() {
         driver.findElement(cartButton).click();
         return new CartPage(driver);
     }
 
+    // return name of the item added to cart
     public String getItem() {
         return item;
     }
 
+    //return price of the item added to card
     public String getPrice() {
         return price;
     }
 
+    //set wait for different web elements
     private void setWait(By element) {
         wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
+    // set price and name
     private void getData(int id) {
         WebElement element;
         setIndex(id);
@@ -71,6 +79,7 @@ public class HomePage {
         System.out.println(price);
     }
 
+    //update the xpath base on the item user added to cart
     private void setIndex(int index) {
         addToCartButton = By.xpath("//*[@data-index="+index+"]//*[contains(@data-locator,\"Button\")]");
         itemTitle = By.xpath("//*[@data-index ="+index+"]//*[contains (@class,\"product-title\")]");
