@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="59.894">
+    <testcase classname="Add item to the cart" name="Add an item to the cart after searching and filtering" time="59.14">
+        <system-out><![CDATA[Given User is in Home page..................................................passed
+And User search for paint items.............................................passed
+And User filter items which are available for click and collect.............passed
+When User add item to the cart..............................................passed
+And Go to cart page.........................................................passed
+Then User should see item quantity and amount in cart page..................passed
+]]></system-out>
+    </testcase>
+</testsuite>
